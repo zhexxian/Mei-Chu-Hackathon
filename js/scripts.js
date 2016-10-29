@@ -1,18 +1,18 @@
 $(document).ready(function(){
-    $("button").click(function(){
-	    $.ajax({
-            type: 'GET',
-            url: 'http://www.google.com',
-            //data: "Hi",
-            //dataType: 'text',
-            success: function(result) {
-                alert("Info sent to backend!");
-            },
-            error: function(result) {
-                alert("Info NOT sent to backend!");
-            }        
-        });
-    });
+    // $("button").click(function(){
+	   //  $.ajax({
+    //         type: 'GET',
+    //         url: 'http://www.google.com',
+    //         //data: "Hi",
+    //         //dataType: 'text',
+    //         success: function(result) {
+    //             alert("Info sent to backend!");
+    //         },
+    //         error: function(result) {
+    //             alert("Info NOT sent to backend!");
+    //         }        
+    //     });
+    // });
    
 });
 
