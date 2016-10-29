@@ -13,8 +13,31 @@ $(document).ready(function(){
     //         }        
     //     });
     // });
-   
+    $("select").imagepicker({
+      hide_select : false,
+      show_label  : false
+    })
+      
 });
+
+var button = document.getElementById('hideshow'); // Assumes element with id='button'
+
+button.onclick = function() {
+    var div = document.getElementById('processedImage');
+    if (div.style.display == 'none') {
+        div.style.display = 'block';
+        $('html, body').animate({
+            scrollTop: $("#processedImage").offset().top
+        }, 2000);
+    }
+};
+
+// jQuery(document).ready(function(){
+//     jQuery('#content').toggle('show');
+//     jQuery('#hideshow').on('click', function(event) {        
+//          jQuery('#content').toggle('show');
+//     });
+// });
 
 //function myFunction() {
 //}

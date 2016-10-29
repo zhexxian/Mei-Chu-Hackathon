@@ -34,20 +34,19 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse navbar-ex1-collapse">
           <ul class="nav navbar-nav">
-            <li class="active"><a href="./index.html">Dashboard</a></li>
-            <li><a href="./storage.html">Storage</a></li>
+            <li><a class="active" href="./index.html">Dashboard</a></li>
             <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Sorting<b class="caret"></b></a>
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Image Sorting<b class="caret"></b></a>
               <ul class="dropdown-menu">
                 <li><a href="./sort-by-date.html">Date</a></li>
                 <li><a href="./sort-by-location.html">Location</a></li>
                 <li><a href="./sort-by-device.html">Device ID</a></li>
               </ul>
             </li>
-            <li><a href="#">Image Processing</a></li>
-            <li><a href="#">Error Detection</a></li>
+            <li><a href="./image-processing.html">Image Processing</a></li>
+            <li><a href="./error-detection.html">Error Detection</a></li>
           </ul>
-          <ul class="nav navbar-nav navbar-right">
+          <ul hidden class="nav navbar-nav navbar-right">
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings<b class="caret"></b></a>
               <ul class="dropdown-menu">
@@ -59,6 +58,106 @@
         </div><!-- /.navbar-collapse -->
       </div>
     </nav>
+    <div class="container">
+      <div class="row">
+          <div class="col-xs-6 col-md-3 text-center">
+            <h3>Today's Users</h3>
+            </br>
+            <svg id="fillgauge1" width="100%" height="200"></svg>
+          </div>
+          <div class="col-xs-6 col-md-3 text-center">
+            <h3>Today's Uploads</h3>
+            </br>
+            <svg id="fillgauge2" width="100%" height="200"></svg>
+          </div>
+          <div class="col-xs-6 col-md-3 text-center">
+            <h3>Total Users</h3>
+            </br>
+            <svg id="fillgauge3" width="100%" height="200"></svg>
+          </div>
+          <div class="col-xs-6 col-md-3 text-center">
+            <h3>Total Uploads</h3>
+            </br>
+            <svg id="fillgauge4" width="100%" height="200"></svg>
+          </div>
+      </div>
+      </br>
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <div id="columnChart" style="height: 400px; width: 100%;"></div>
+        </div>
+        <div class="col-xs-6 col-md-2">
+          <div class="thumbnail" style="height: 400px; width: 100%;">
+            <div class="caption">
+              <h3>Oct</h3>
+            </div>
+            <img src="image/placeholder.png">
+            </br>
+            <img src="image/placeholder.png">
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-2">
+          <div class="thumbnail" style="height: 400px; width: 100%;">
+            <div class="caption">
+              <h3>Sep</h3>
+            </div>
+            <img src="image/placeholder.png">
+            </br>
+            <img src="image/placeholder.png">
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-2">
+          <div class="thumbnail" style="height: 400px; width: 100%;">
+            <div class="caption">
+              <h3>Aug</h3>
+            </div>
+            <img src="image/placeholder.png">
+            </br>
+            <img src="image/placeholder.png">
+            </br>
+            <p><a href="./sort-by-date.html" class="btn btn-primary btn-group-justified" role="button">View More</a></p>
+          </div>
+        </div>
+      </div>
+      </br>
+      <div class="row">
+        <div class="col-xs-12 col-md-6">
+          <div id="pieChart" style="height: 400px; width: 100%;"></div>
+        </div>
+        <div class="col-xs-6 col-md-2">
+          <div class="thumbnail" style="height: 400px; width: 100%;">
+            <div class="caption">
+              <h3>小木屋</h3>
+            </div>
+            <img src="image/placeholder.png">
+            </br>
+            <img src="image/placeholder.png">
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-2">
+          <div class="thumbnail" style="height: 400px; width: 100%;">
+            <div class="caption">
+              <h3>田徑場</h3>
+            </div>
+            <img src="image/placeholder.png">
+            </br>
+            <img src="image/placeholder.png">
+          </div>
+        </div>
+        <div class="col-xs-6 col-md-2">
+          <div class="thumbnail" style="height: 400px; width: 100%;">
+            <div class="caption">
+              <h3>第二餐廳</h3>
+            </div>
+            <img src="image/placeholder.png">
+            </br>
+            <img src="image/placeholder.png">
+            </br>
+            <p><a href="./sort-by-location.html" class="btn btn-primary btn-group-justified" role="button">View More</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
@@ -69,6 +168,15 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/canvasjs/1.7.0/canvasjs.min.js"></script>
+
+    <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
+    
     <script src="js/scripts.js"></script>
+    <script src="js/charts.js"></script>
+    <script src="js/liquidFillGauge.js" language="JavaScript"></script>
+
   </body>
   </html>
