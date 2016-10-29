@@ -2,7 +2,6 @@ class RecordsController < ApplicationController
   def index
     @records = Record.all
 
-    #render :json => @records.to_json #"index.json.erb", :content_type => 'application/json'
 
     respond_to do |format|
       format.html # index.html.erb
@@ -25,7 +24,7 @@ class RecordsController < ApplicationController
     @record = Record.find(params[:id])
     respond_to do |format|
       format.html { @page_title = @record.id} # show.html.erb
-      format.json { render :json => { id: @record.id }.to_json }
+      format.json { render :json => @record.to_json }
     end
   end
 
