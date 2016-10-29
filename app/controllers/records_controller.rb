@@ -2,6 +2,8 @@ class RecordsController < ApplicationController
   def index
     @records = Record.all
 
+    #render :json => @records.to_json #"index.json.erb", :content_type => 'application/json'
+
     respond_to do |format|
       format.html # index.html.erb
       format.json { render :json => @records.to_json }
@@ -10,14 +12,13 @@ class RecordsController < ApplicationController
 
   def new 
     @record = Record.new       
-    #render "_form"
   end
 
   def create
     @record = Record.new(record_params)
     @record.save
 
-    redirect_to reocrds_url
+    redirect_to :action => :index 
   end
 
   def show
@@ -28,17 +29,17 @@ class RecordsController < ApplicationController
     end
   end
 
-  def edit
-    @record = Record.find(params[:id])
-    render "_form"
-  end
+  #def edit
+   # @record = Record.find(params[:id])
+    #render "_form"
+  #end
 
-  def update
-    @record = Record.find(params[:id])
-    @record.update(record_params)
+  #def update
+   # @record = Record.find(params[:id])
+    #@record.update(record_params)
 
-    redirect_to record_url(@record)
-  end
+    #redirect_to record_url(@record)
+  #end
 
   def destroy
     @record = Record.find(params[:id])

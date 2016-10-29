@@ -1,19 +1,19 @@
 <!doctype html>
 
 <html lang="en">
-<head>
-  <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
 
-  <title>The HTML5 Herald</title>
-  <meta name="description" content="The HTML5 Herald">
-  <meta name="author" content="SitePoint">
+    <title>The HTML5 Herald</title>
+    <meta name="description" content="The HTML5 Herald">
+    <meta name="author" content="SitePoint">
 
-  <link rel="stylesheet" href="css/styles.css?v=1.0">
+    <link rel="stylesheet" href="css/styles.css?v=1.0">
 
-  <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/styles.css">
 
-  <!--[if lt IE 9]>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
+    <!--[if lt IE 9]>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7.3/html5shiv.js"></script>
     <![endif]-->
   </head>
 
@@ -70,5 +70,24 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     <script src="js/scripts.js"></script>
+
+
+    <h1>總表</h1>
+    <%= link_to '新增成員', new_record_path, class:"btn btn-info", style:"font-size:20px; margin-top:10px; margin-bottom:10px;" %>
+      <table class = "table table-striped"> 
+        <tbody>
+          <% @records.each do |r| %>
+            <tr>
+              <td> <%= r.longitude%> </td>
+              <td > <%= r.latitude%> </td>
+              <td > <%= r.device_id%> </td>
+              <td align="right" width="50px" style="font-size:20px;"> <%= link_to '查看', record_path(r) %>  </td>
+              <td align="right" width="50px" style="font-size:20px;"> <%= link_to '刪除', record_path(r), :method => :delete, :data => { :confirm => "Are you sure?" } %></td> 
+            </tr>
+          <%end%>
+        </tbody>
+      </table>
+
+
   </body>
-  </html>
+</html>

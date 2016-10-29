@@ -1,0 +1,39 @@
+<div id="main-container" class="container bg-white" style="padding-left:100px; padding-right:150px; padding-bottom:100px;">
+  <h1 style="margin-bottom:40px;"> 更新成員資料 </h1>
+  <%= form_for @record ,:html=>{class: "form-horizontal", role:"form", id:"member-form"} do |f| %>
+
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label">longtitude:</label>
+      <div class="col-sm-10">
+        <%= f.number_field :latitude, :step => "0.01", class:"form-control",  placeholder:"ex.94.87" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label">longtitude:</label>
+      <div class="col-sm-10">
+        <%= f.number_field :longitude, :step => "0.01", class:"form-control",  placeholder:"ex.94.87" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label">device_id:</label>
+      <div class="col-sm-10">
+        <%= f.number_field :device_id, class:"form-control",  placeholder:"the id of the camera" %>
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label class="col-sm-2 control-label">上傳圖片</label>
+      <div class="col-sm-10">
+        <%#= f.file_field :member_image %>
+      </div> 
+    </div>
+
+    <div align="right"  style="margin-top:15px; margin-bottom:15px"> 
+      <%=f.submit "送出",class:"btn btn-lg btn-info"%>
+    </div>
+
+  <% end %>
+</div>
