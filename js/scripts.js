@@ -1,18 +1,25 @@
 $(document).ready(function(){
-    // $("button").click(function(){
-	   //  $.ajax({
-    //         type: 'GET',
-    //         url: 'http://www.google.com',
-    //         //data: "Hi",
-    //         //dataType: 'text',
-    //         success: function(result) {
-    //             alert("Info sent to backend!");
-    //         },
-    //         error: function(result) {
-    //             alert("Info NOT sent to backend!");
-    //         }        
-    //     });
-    // });
+    $("button").click(function(){
+	    $.ajax({
+            type: 'GET',
+            url: 'https://kiwi-blog.herokuapp.com/records.json',
+            success: function(result) {
+                //alert("Info sent to backend! ID: "+result[0].id);
+
+                var img = new Image();
+                var div = document.getElementById('updated-images');
+
+                img.onload = function() {
+                  div.appendChild(img);
+                };
+
+                img.src = result[0].image_url;
+            },
+            error: function(result) {
+                alert("Error connecting to backend!");
+            }        
+        });
+    });
     $("select").imagepicker({
       hide_select : false,
       show_label  : false

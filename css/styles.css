@@ -41,3 +41,13 @@ ul.thumbnails.image_picker_selector li .thumbnail {
     max-width: 200px; }
 ul.thumbnails.image_picker_selector li .thumbnail.selected {
   background: #0088cc; }
+
+
+#updated-images img{
+  width: 250px;
+  height: 184px;
+  padding: 4px;
+  margin: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+}
