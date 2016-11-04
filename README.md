@@ -1,24 +1,12 @@
-# README
+# Mei Chu Hackathon 2016
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Official website: http://hackathon.nctu.edu.tw/2016/
 
-Things you may want to cover:
+Facebook page: https://www.facebook.com/groups/hacknctu/
 
-* Ruby version
+Project details:
 
-* System dependencies
 
-* Configuration
+ - An up-to-date version of Google maps street view
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+ - Car camera, web server and administrative interface, map and lifesyle app
