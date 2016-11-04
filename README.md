@@ -10,3 +10,5 @@ Project details:
  - An up-to-date version of Google maps street view
 
  - Car camera, web server and administrative interface, map and lifesyle app
+
+Presentation slides: ./Hackathon-Presentation.pdf
