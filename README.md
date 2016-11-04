@@ -12,3 +12,5 @@ Project details:
  - Car camera, web server and administrative interface, map and lifesyle app
 
 Presentation slides: ./Hackathon-Presentation.pdf
+
+Hackpad discussion history: https://hackpad.com/ep/pad/static/Aqan9IhYglq
